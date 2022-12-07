@@ -9,8 +9,9 @@ try:
     from torchvision import models, transforms 
 except ImportError: 
     import pip 
-    pip.main(['install', '--user', 'torchvision']) 
+    pip.main(['install', '-f', 'https://download.pytorch.org/whl/cu113/torch_stable.html']) 
     from torchvision import models, transforms
+    
 
 try: 
     import pytorch_lightning as pl 
