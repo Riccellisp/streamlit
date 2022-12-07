@@ -1,5 +1,5 @@
 torchvision
 pytorch_lightning
 torch
-sklearn
+scikit-learn
 streamlit
