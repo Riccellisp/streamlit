@@ -4,10 +4,30 @@ import json
 import streamlit as st
 
 from PIL import Image
-from torchvision import models, transforms 
 
-import pytorch_lightning as pl
-import torch.optim as optim
+try: 
+    from torchvision import models, transforms 
+except ImportError: 
+    import pip 
+    pip.main(['install', '--user', 'torchvision']) 
+    from torchvision import models, transforms
+
+try: 
+    import pytorch_lightning as pl 
+except ImportError: 
+    import pip 
+    pip.main(['install', '--user', 'pytorch_lightning']) 
+    import pytorch_lightning as pl
+
+try: 
+    import torch.optim as optim 
+except ImportError: 
+    import pip 
+    pip.main(['install', '--user', 'torch']) 
+    import torch.optim as optim    
+    
+
+
 from sklearn.metrics import classification_report
 from torchmetrics import ConfusionMatrix
 
