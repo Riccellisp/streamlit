@@ -197,7 +197,7 @@ def transform_image(image):
 @st.cache
 def load_model():
 
-    ckpt_path = f'C:\\Users\\lueli\\OneDrive\\Área de Trabalho\\blur-detection-mobilenet-5358.ckpt'
+    ckpt_path = f'blur-detection-mobilenet-5358.ckpt'
     model_ft = ClassificationModel.load_from_checkpoint(ckpt_path)
     # Since we are using our model only for inference, switch to `eval` mode:
     model_ft.eval()
