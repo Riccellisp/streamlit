@@ -1,6 +1,6 @@
-torchvision
-pytorch_lightning
-torch
+torchvision==0.13.1
+pytorch_lightning==1.7.7
+torch==1.12.1
 scikit-learn
 streamlit
 mysql-connector-python
