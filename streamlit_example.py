@@ -215,7 +215,7 @@ def transform_image(image):
 
 
 
-@st.cache
+@st.cache_data
 def load_model():
 
     ckpt_path = f'blur-detection-mobilenet-5358.ckpt'
